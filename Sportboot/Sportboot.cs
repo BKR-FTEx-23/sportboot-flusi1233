@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Sportboot
 {
@@ -11,15 +13,28 @@ namespace Sportboot
         double länge;
         double leistung;
         double gewicht;
-        bool führerscheinpflicht;
+        bool führerscheinpflicht = false;
        
 
         public Sportboot(string p_bootsnummer, string p_länge, string p_leistung)
         {
-            bootsnummer = Convert.ToDouble(p_bootsnummer);
-            länge = Convert.ToDouble(p_länge);
-            leistung = Convert.ToDouble(p_leistung);
+            try
+            {
+              
 
+
+                bootsnummer = Convert.ToDouble(p_bootsnummer);
+                länge = Convert.ToDouble(p_länge);
+                leistung = Convert.ToDouble(p_leistung);
+            }
+            catch 
+            {
+
+
+                MessageBox.Show("Eingegebener Wert nicht möglich!! \r\n Bitte andere Werte eingeben!!"); 
+            
+            
+            }
         }
         public Sportboot(string p)
         {
@@ -41,20 +56,8 @@ namespace Sportboot
             get
             {
 
-                return Fuhrerscheinpflicht;
-
-
-
-            }
-                
-                
-                
-                
-            set
-            {
-                if(leistung>11)
+                if (leistung > 11)
                 {
-
 
                     führerscheinpflicht = true;
 
@@ -63,17 +66,17 @@ namespace Sportboot
                 else
                 {
 
-
-                    führerscheinpflicht=false;
-
-
-
+                    führerscheinpflicht = false;
                 }
+                return führerscheinpflicht;
 
 
 
-
-
+            }
+                               
+            set
+            {
+              
             }
         }
 
@@ -81,14 +84,12 @@ namespace Sportboot
         {
             get
             {
+                gewicht = 275 * länge - 1125;
                 return gewicht;
 
             }
             set
             {
-
-                gewicht = 275 * länge - 1125;
-
 
             }
         }

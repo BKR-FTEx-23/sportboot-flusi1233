@@ -123,7 +123,7 @@
             // 
             this.btnFührerscheinpflicht.Location = new System.Drawing.Point(146, 330);
             this.btnFührerscheinpflicht.Name = "btnFührerscheinpflicht";
-            this.btnFührerscheinpflicht.Size = new System.Drawing.Size(133, 45);
+            this.btnFührerscheinpflicht.Size = new System.Drawing.Size(149, 45);
             this.btnFührerscheinpflicht.TabIndex = 9;
             this.btnFührerscheinpflicht.Text = "Führerscheinpflicht";
             this.btnFührerscheinpflicht.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             // 
             this.btnGewicht.Location = new System.Drawing.Point(146, 393);
             this.btnGewicht.Name = "btnGewicht";
-            this.btnGewicht.Size = new System.Drawing.Size(133, 45);
+            this.btnGewicht.Size = new System.Drawing.Size(149, 45);
             this.btnGewicht.TabIndex = 10;
             this.btnGewicht.Text = "Gewicht";
             this.btnGewicht.UseVisualStyleBackColor = true;
